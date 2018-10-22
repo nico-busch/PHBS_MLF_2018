@@ -12,6 +12,6 @@ Our project makes use of two databases provided through the Wharton Research Dat
 ## Goal of the Project
 Our project aims to build a model able to predict the movement of stock prices by analyzing the content of news data. In an evergrowing sea of information we want to determine and understand the data with the most predictive power. In order to maximize the fit of our model during the limited time of this project, we will focus on a few tech companies traded in the Nasdaq Stock Exchange.
 
-Specifically, our project will try to solve the binary classification problem of predicting either a increase or decrease of the stock price of a given company on a given day based on news on that company on the same day. While the model's features are to be determined based on the news data, the market data is used to label our training set.
+Specifically, our project will try to solve the binary classification problem of predicting either a increase or decrease of the stock price of a given company on a given day based on news on that company on the same day. Therefore, the model's features are to be determined based on the news data, while the market data is used to label our training set.
 
 
