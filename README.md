@@ -16,3 +16,20 @@ Our project makes use of two databases provided through the Wharton Research Dat
 - News data (Source: Ravenpack News Analytics) - provides real-time structured sentiment, relevance and novelty data for entities and events detected in the unstructured text published by reputable content sources.
 - Market data (Source: Compustat Global) - provides financial market information such as opening price, closing price, trading volume, calculated returns, etc.
 
+## Pre-Processing
+
+![marketdate](/images/marketdate.PNG)
+
+![abnormal](/images/abnormal.png)
+
+![news_type](/images/news_type.png)
+
+## Classification
+
+![pca](/images/pca.png)
+
+![features](/images/features.PNG)
+
+![models](/images/models.PNG)
+
+![result](/images/result.PNG)
