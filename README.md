@@ -26,7 +26,7 @@ The news data and the stock market data are merged on company name and news arri
 
 Next, we use the S&P daily return retrieved from Yahoo! Finance and compute the market beta of each Dow Jones Industrial Average stock. We proceed by calculating beta as the covariance between the market and the individual stock return divided by the market return variance. Once the beta is computed we can apply the CAPM formula and find the daily stock abnormal return. 
 
-We will use the abnormal return as our target variable in the subsequent Machine Learning binary classification exercise. More precisely, we will try to predict if abnormal return is positive or negative following a news announcement so for that purpose, we add a “abnormal_return_flag” variable to our dataset. 
+We will use the abnormal return as our target variable in the subsequent Machine Learning binary classification exercise. More precisely, we will try to predict if abnormal return is positive or negative following a news announcement. For that purpose, we add a “abnormal_return_flag” variable to our dataset. 
 
 Before starting data exploration, we further clean or dataset dropping columns which are not exploitable inside our machine learning classifiers or not directly related to the news analytics package. We finally remove rows where 25% of important features are missing. The final dataset is composed of 42 546 observations and our output variable is well-balanced between positive and negative abnormal returns. 
 
@@ -45,23 +45,41 @@ o GROUP
 o ESS
 
 o AES
+
 o	AEV
+
 o	ENS
+
 o	ENS_SIMILARITY_GAP
+
 o	ENS_ELAPSED
+
 o	G_ENS
+
 o	G_ENS_SIMILARITY_GAP
+
 o	G_ENS_ELAPSED
+
 o	NEWS_TYPE
+
 o	RP_STORY_EVENT_INDEX
+
 o	RP_STORY_EVENT_COUNT
+
 o	CSS
+
 o	NIP
+
 o	PEQ
+
 o	BEE
+
 o	BMQ
+
 o	BAM
+
 o	BCA
+
 o	MCQ
 
 We create dummies for each categorical nominal variable in the dataset to be able to exploit their predictive power during model training. Furthermore, we plot violin plots for the variables GROUP and NEWS_TYPE to have a better idea of their impact on abnormal returns. 
@@ -78,7 +96,7 @@ We are interested first in assessing feature importance in predicting the sign o
 
 Top features include AEV, AES and G_ENS_SIMILARITY_GAP.
 
-Next, we run a PCA to see how many Principal Components would be needed to explain most of the dispersion in the data. We conclude that at least 10 principal components should be use in the model selection pipeline if we want to keep some consistency with the data and reduce computation time.
+Next, we run a PCA to see how many Principal Components would be needed to explain most of the dispersion in the data. We conclude that at least 10 principal components should be use in the model selection pipeline if we want to keep some explanatory power and reduce computation time.
 
 ![pca](/images/pca.png)
 
@@ -88,9 +106,10 @@ Now we proceed to the construction of our scikit-learn pipeline which we will us
 
 Based on the output table, we conclude that the Random Forest classifier is the best model to predict the sign of abnormal returns (highest test accuracy average, second lowest test accuracy standard deviation). 
 
-
 ## Hyperparameter tuning 
 
-A last step before running our final model is to use a Grid Search in order to perform hyperparameters optimization on our Random Forest classifier. The list of parameters we wish to optimize includes: “max_features”, “min samples split”, “bootstrap” and “criterion”. Using the optimized parameters, we fit another Random Forest classifier and get a final test accuracy of 68% (higher accuracy after hyperparameter tuning).
+A last step before running our final model is to use a Grid Search in order to perform hyperparameters optimization on our Random Forest classifier. The list of parameters we wish to optimize includes: “max_features”, “min samples split”, “bootstrap” and “criterion”. 
+
+Using the optimized parameters, we fit another Random Forest classifier and get a final test accuracy of 68% (higher accuracy after hyperparameter tuning).
 
 ![result](/images/result.PNG)
