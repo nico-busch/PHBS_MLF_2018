@@ -15,7 +15,9 @@ Specifically, our project will try to solve the binary classification problem of
 ## Description of Data
 
 Our project makes use of two databases provided through the Wharton Research Data Services (WRDS) platform.
+
 o News data (Source: Ravenpack News Analytics) - provides real-time structured sentiment, relevance and novelty data for entities and events detected in the unstructured text published by reputable content sources.
+
 o Market data (Source: Compustat Global) - provides financial market information such as opening price, closing price, trading volume, calculated returns, etc.
 
 ## Pre-Processing
