@@ -38,10 +38,13 @@ In a first step, we plot the histogram of abnormal returns. We notice it follows
 
 Our final feature matrix is composed of the following variables (see the Raven Pack user guide section "Data Field Descriptions" for more information):
 
--RELEVANCE
--GROUP
--ESS
--AES
+o RELEVANCE
+
+o GROUP
+
+o ESS
+
+o AES
 o	AEV
 o	ENS
 o	ENS_SIMILARITY_GAP
