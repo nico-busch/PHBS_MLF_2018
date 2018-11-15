@@ -106,7 +106,7 @@ Now we proceed to the construction of our scikit-learn pipeline which we will us
 
 Based on the output table, we conclude that the Random Forest classifier is the best model to predict the sign of abnormal returns (highest test accuracy average, second lowest test accuracy standard deviation). 
 
-## Hyperparameter tuning 
+## Hyperparameter Tuning 
 
 A last step before running our final model is to use a Grid Search in order to perform hyperparameters optimization on our Random Forest classifier. The list of parameters we wish to optimize includes: “max_features”, “min samples split”, “bootstrap” and “criterion”. 
 
