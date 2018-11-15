@@ -7,11 +7,13 @@ Nicolas Busch | 1802010245 | [nico-busch](https://github.com/nico-busch)
 Raphael Vilaseca | 1802010219 | [rvilaseca](https://github.com/rvilaseca)
 
 ## Goal of the Project
-Our project aims to build a model able to predict the movement of stock prices by analyzing the content of news data. In an evergrowing sea of information we want to determine and understand the data with the most predictive power. In order to maximize the fit of our model during the limited timeframe of this project, we will focus on a subset of US-listed tech companies traded in the Nasdaq Stock Exchange.
 
-Specifically, our project will try to solve the binary classification problem of predicting either a increase or decrease of the stock price of a given company on a given day based on news on that company on the same day. Therefore, the model's features are to be determined based on news data, while market data is used to label our training set.
+Our project aims to build a model able to predict the movement of stock prices by analyzing the content of news data. In an evergrowing sea of information we want to determine and understand the data with the most predictive power. In order to maximize the fit of our model during the limited timeframe of this project, we will focus on a subset of US-listed companies traded on the Dow Jones Industrial Average.
+
+Specifically, our project will try to solve the binary classification problem of predicting either an increase or decrease of the abnormal return of a given company stock on a given day based on news on that company on the same day. Therefore, the model's features are to be determined based on news data, while market data is used to label our training set.
 
 ## Description of Data
+
 Our project makes use of two databases provided through the Wharton Research Data Services (WRDS) platform.
 o News data (Source: Ravenpack News Analytics) - provides real-time structured sentiment, relevance and novelty data for entities and events detected in the unstructured text published by reputable content sources.
 o Market data (Source: Compustat Global) - provides financial market information such as opening price, closing price, trading volume, calculated returns, etc.
@@ -58,6 +60,8 @@ o	BCA
 o	MCQ
 
 We create dummies for each categorical nominal variable in the dataset to be able to exploit their predictive power during model training. Furthermore, we plot violin plots for the variables GROUP and NEWS_TYPE to have a better idea of their impact on abnormal returns. 
+
+![group](/images/group.png)
 
 ![news_type](/images/news_type.png)
 
