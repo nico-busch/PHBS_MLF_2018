@@ -22,13 +22,13 @@ o Market data (Source: Compustat Global) - provides financial market information
 
 ## Pre-Processing
 
-The news data and the stock market data are merged on company name and news arrival time in such a way that we consider the current daily return if the news is published during normal trading hours (from 9:30 a.m. until 4 p.m.). Otherwise we consider the next trading day return. This specification is important especially if some company news is published during week-ends or US national holidays because the market impact can only be measure on the next market opening day. 
+The news data and the stock market data are merged on company name and news arrival time in such a way that we consider the current daily return if the news is published during normal trading hours (from 9:30 a.m. until 4 p.m.). Otherwise we consider the next trading day return. This specification is important especially if some company news is published during weekends or US national holidays because the market impact can only be measured on the next market opening day. 
 
 Next, we use the S&P daily return retrieved from Yahoo! Finance and compute the market beta of each Dow Jones Industrial Average stock. We proceed by calculating beta as the covariance between the market and the individual stock return divided by the market return variance. Once the beta is computed we can apply the CAPM formula and find the daily stock abnormal return. 
 
 We will use the abnormal return as our target variable in the subsequent machine learning binary classification exercise. More precisely, we will try to predict if abnormal return is positive or negative following a news announcement. For that purpose, we add a “abnormal_return_flag” variable to our dataset. 
 
-Before starting data exploration, we further clean or dataset dropping columns which are not exploitable inside our machine learning classifiers or not directly related to the news analytics package. We finally remove rows where 25% of important features are missing. The final dataset is composed of 42 546 observations and our output variable is well-balanced between positive and negative abnormal returns. 
+Before starting data exploration, we further clean our dataset dropping columns which are not exploitable inside our machine learning classifiers or not directly related to the news analytics package. We finally remove rows where 25% of important features are missing. The final dataset is composed of 42 546 observations and our output variable is well-balanced between positive and negative abnormal returns. 
 
 ## Data exploration
 
