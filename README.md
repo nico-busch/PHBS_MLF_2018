@@ -26,7 +26,7 @@ The news data and the stock market data are merged on company name and news arri
 
 Next, we use the S&P daily return retrieved from Yahoo! Finance and compute the market beta of each Dow Jones Industrial Average stock. We proceed by calculating beta as the covariance between the market and the individual stock return divided by the market return variance. Once the beta is computed we can apply the CAPM formula and find the daily stock abnormal return. 
 
-We will use the abnormal return as our target variable in the subsequent Machine Learning binary classification exercise. More precisely, we will try to predict if abnormal return is positive or negative following a news announcement. For that purpose, we add a “abnormal_return_flag” variable to our dataset. 
+We will use the abnormal return as our target variable in the subsequent machine learning binary classification exercise. More precisely, we will try to predict if abnormal return is positive or negative following a news announcement. For that purpose, we add a “abnormal_return_flag” variable to our dataset. 
 
 Before starting data exploration, we further clean or dataset dropping columns which are not exploitable inside our machine learning classifiers or not directly related to the news analytics package. We finally remove rows where 25% of important features are missing. The final dataset is composed of 42 546 observations and our output variable is well-balanced between positive and negative abnormal returns. 
 
@@ -36,7 +36,7 @@ In a first step, we plot the histogram of abnormal returns. We notice it follows
 
 ![abnormal](/images/abnormal.png)
 
-Our final feature matrix is composed of the following variables (see the Raven Pack user guide section "Data Field Descriptions" for more information):
+Our final feature matrix is composed of the following variables (see the Raven Pack User Guide section "Data Field Descriptions" for more information):
 
 o RELEVANCE
 
@@ -90,7 +90,7 @@ We create dummies for each categorical nominal variable in the dataset to be abl
 
 ## Model Training
 
-We are interested first in assessing feature importance in predicting the sign of abnormal return. To that end, we fit a random forest classifier with 500 decision trees and use the functionality " forest. feature_importances” to sort features by importance. 
+We are interested first in assessing feature importance in predicting the sign of abnormal returns. To that end, we fit a random forest classifier with 500 decision trees and use the functionality " forest. feature_importances” to sort features by importance. 
 
 ![features](/images/features.PNG)
 
